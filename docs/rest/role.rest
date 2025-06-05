@@ -1,0 +1,19 @@
+GET http://127.0.0.1:3000/roles
+
+### Guardar
+POST http://127.0.0.1:3000/roles
+Content-Type: application/json
+
+{
+    "nombre": "ADMIN",
+    "descripcion": "Administrador"
+}
+
+### Guardar
+POST http://127.0.0.1:3000/roles
+Content-Type: application/json
+
+{
+    "nombre": "GERENTE",
+    "descripcion": "Adminstra Sucursales"
+}

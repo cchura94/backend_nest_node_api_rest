@@ -7,3 +7,12 @@ nest g res modules/admin/users
 ```
 npm i --save class-validator class-transformer
 ``` 
+#### Para Cifrado de contraseñas
+```
+npm i bcrypt
+```
+
+```
+nest g res modules/admin/roles
+nest g res modules/admin/permissions
+```

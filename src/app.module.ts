@@ -5,6 +5,10 @@ import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { UsersModule } from './modules/admin/users/users.module';
 import { User } from './modules/admin/users/entities/user.entity';
+import { RolesModule } from './modules/admin/roles/roles.module';
+import { PermissionsModule } from './modules/admin/permissions/permissions.module';
+import { Role } from './modules/admin/roles/entities/role.entity';
+import { Permission } from './modules/admin/permissions/entities/permission.entity';
 
 @Module({
   imports: [
@@ -18,10 +22,12 @@ import { User } from './modules/admin/users/entities/user.entity';
       username: 'postgres',
       password: 'admin54321',
       database: 'bd_backend_nest2',
-      entities: [User],
+      entities: [User, Role, Permission],
       synchronize: true
     }),
-    UsersModule
+    UsersModule,
+    RolesModule,
+    PermissionsModule
   ],
   controllers: [AppController],
   providers: [AppService],

@@ -1,4 +1,4 @@
-import { IsEmail, IsString, Matches, MaxLength, MinLength } from "class-validator";
+import { IsArray, IsEmail, IsOptional, IsString, IsUUID, Matches, MaxLength, MinLength } from "class-validator";
 
 export class CreateUserDto {
 
@@ -15,5 +15,10 @@ export class CreateUserDto {
     @MinLength(6)
     @MaxLength(200)
     password: string;
+
+    @IsOptional()
+    @IsArray()
+    @IsUUID('4', {each: true})
+    roleIds?: string[]
 
 }
