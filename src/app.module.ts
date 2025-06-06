@@ -14,11 +14,12 @@ import { AuthModule } from './modules/auth/auth.module';
 @Module({
   imports: [
     ConfigModule.forRoot({
+      // isGlobal: true,
       envFilePath: '.development.env',
     }),
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: 'localhost',
+      host: process.env.DB_HOST || 'localhost',
       port: 5436, // el puerto pueden cambiar
       username: 'postgres',
       password: 'admin54321',
