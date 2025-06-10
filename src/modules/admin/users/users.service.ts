@@ -63,8 +63,27 @@ export class UsersService {
     return resto_datos;
   }
 
-  findAll(): Promise<User[]> {
-    return this.usersRepository.find();
+  async findAll(page: number=1, limit: number = 10, search: string = '')/*: Promise<User[]>*/ {
+    const queryBuilder = this.usersRepository.createQueryBuilder('user')
+      .leftJoinAndSelect('user.roles', 'role')
+      .leftJoinAndSelect('role.permissions', 'permission')
+      .where('user.username LIKE :search OR user.email LIKE :search', {search: `%${search}%`})
+
+      queryBuilder.skip((page - 1) * 10).take(limit);
+
+      const [users, total] = await queryBuilder.getManyAndCount();
+
+      const totalPages = Math.ceil(total/limit)
+    
+      return {
+        data: users,
+        total,
+        page,
+        limit,
+        totalPages,
+        search
+      }
+      // return this.usersRepository.find();
   }
 
   async findOne(id: string): Promise<User> {
