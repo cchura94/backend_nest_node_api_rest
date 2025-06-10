@@ -1,12 +1,14 @@
 GET http://127.0.0.1:3000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlNpbW9uMTAiLCJpZCI6IjJmNTUzYzdiLTM2ZTUtNDdjZS04NjNmLTljNmJlYWE2Y2I0OCIsImlhdCI6MTc0OTUyMTU3NCwiZXhwIjoxNzQ5NTI1MTc0fQ.uF2mgL7A0ps1ubMyzL1njQ0O-CXCPltpog5Q3V8SGo4
 
 ### Guardar Usuario
 POST http://127.0.0.1:3000/users
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlNpbW9uMTAiLCJpZCI6IjJmNTUzYzdiLTM2ZTUtNDdjZS04NjNmLTljNmJlYWE2Y2I0OCIsImlhdCI6MTc0OTUyMTU3NCwiZXhwIjoxNzQ5NTI1MTc0fQ.uF2mgL7A0ps1ubMyzL1njQ0O-CXCPltpog5Q3V8SGo4
 
 {
-    "username": "ana2",
-    "email": "ana2@mail.com",
+    "username": "ana4",
+    "email": "ana4@mail.com",
     "password": "ana25432111"
 }
 

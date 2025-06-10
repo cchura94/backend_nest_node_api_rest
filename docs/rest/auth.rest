@@ -1,7 +1,22 @@
+### Login
 POST http://127.0.0.1:3000/auth/login
 Content-Type: application/json
 
 {
-    "email": "david5@mail.com",
-    "password": "david54321"
+    "email": "simon10@mail.com",
+    "password": "simon1054321"
 }
+
+### Registro de usuario
+POST http://127.0.0.1:3000/auth/register
+Content-Type: application/json
+
+{
+    "username": "Simon10",
+    "email": "simon10@mail.com",
+    "password": "simon1054321"
+}
+
+### Perfil
+GET http://127.0.0.1:3000/auth/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlNpbW9uMTAiLCJpZCI6IjJmNTUzYzdiLTM2ZTUtNDdjZS04NjNmLTljNmJlYWE2Y2I0OCIsImlhdCI6MTc0OTUyMTM4OSwiZXhwIjoxNzQ5NTI0OTg5fQ.RpcAn9uYic6kONrTPw63yGMt-nxCNHgBsHfaUWgh5qc
