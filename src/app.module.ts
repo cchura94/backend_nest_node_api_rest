@@ -25,7 +25,7 @@ import { AuthModule } from './modules/auth/auth.module';
       password: 'admin54321',
       database: 'bd_backend_nest2',
       entities: [User, Role, Permission],
-      synchronize: true
+      synchronize: false
     }),
     UsersModule,
     RolesModule,
