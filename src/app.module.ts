@@ -10,6 +10,8 @@ import { PermissionsModule } from './modules/admin/permissions/permissions.modul
 import { Role } from './modules/admin/roles/entities/role.entity';
 import { Permission } from './modules/admin/permissions/entities/permission.entity';
 import { AuthModule } from './modules/auth/auth.module';
+import { PersonasModule } from './modules/admin/personas/personas.module';
+import { EntidadComercialModule } from './modules/admin/entidad-comercial/entidad-comercial.module';
 
 @Module({
   imports: [
@@ -30,7 +32,9 @@ import { AuthModule } from './modules/auth/auth.module';
     UsersModule,
     RolesModule,
     PermissionsModule,
-    AuthModule
+    AuthModule,
+    PersonasModule,
+    EntidadComercialModule
   ],
   controllers: [AppController],
   providers: [AppService],
