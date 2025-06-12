@@ -19,11 +19,11 @@ import { AuthModule } from './modules/auth/auth.module';
     }),
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: process.env.DB_HOST || 'localhost',
-      port: 5436, // el puerto pueden cambiar
+      host: /*process.env.DB_HOST ||*/'postgres_nest_db',
+      port: 5432, // el puerto pueden cambiar
       username: 'postgres',
       password: 'admin54321',
-      database: 'bd_backend_nest2',
+      database: 'bd_backend_nest_docker',
       entities: [User, Role, Permission],
       synchronize: false
     }),
