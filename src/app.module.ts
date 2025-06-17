@@ -23,8 +23,8 @@ import { InventarioModule } from './modules/admin/inventario/inventario.module';
     }),
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: /*process.env.DB_HOST ||*/'postgres_nest_db',
-      port: 5432, // el puerto pueden cambiar
+      host: 'localhost'/*process.env.DB_HOST || 'postgres_nest_db'*/,
+      port: 5436, // 5432 el puerto pueden cambiar
       username: 'postgres',
       password: 'admin54321',
       database: 'bd_backend_nest_docker',

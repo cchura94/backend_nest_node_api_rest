@@ -25,3 +25,8 @@ nest g res modules/admin/inventario/almacen
 nest g res modules/admin/inventario/sucursal
 
 ```
+
+### Swagger
+```
+npm install --save @nestjs/swagger
+```
