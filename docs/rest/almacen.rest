@@ -1,0 +1,29 @@
+### Listar Almacen
+GET http://127.0.0.1:3000/almacen
+
+### Guardar Almacen
+POST http://127.0.0.1:3000/almacen
+Content-Type: application/json
+
+{
+    "nombre": "Almacen A",
+    "codigo": "ALM-A",
+    "descripcion": "Almacen 1",
+    "sucursal": 2
+}
+
+### mostrar almacen
+GET http://127.0.0.1:3000/almacen/1
+
+### Modificar almacen
+PATCH http://127.0.0.1:3000/almacen/1
+Content-Type: application/json
+
+{
+  "nombre": "MUEBLES PARA OFICINAS",
+  "descripcion": "Muebles de Madera"
+}
+
+
+### Eliminar almacen
+DELETE http://127.0.0.1:3000/almacen/2

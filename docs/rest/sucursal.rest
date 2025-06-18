@@ -1,0 +1,11 @@
+GET http://127.0.0.1:3000/sucursal
+### guardar
+POST http://127.0.0.1:3000/sucursal
+Content-Type: application/json
+
+{
+    "nombre": "SEGUNDA SUCURSAL",
+    "ciudad": "La Paz -1",
+    "direccion": "Av. 543. Zona: BDSF"
+}
+### mostrar
