@@ -1,0 +1,27 @@
+### Listar Categoria
+GET http://127.0.0.1:3000/producto?page=1&limit=3
+
+### Guardar Categoria
+POST http://127.0.0.1:3000/categoria
+Content-Type: application/json
+
+{
+    "nombre": "ELECTRONICOS",
+    "descripcion": "dispositivos para PC"
+}
+
+### mostrar Categoria
+GET http://127.0.0.1:3000/categoria/1
+
+### Modificar Categoria
+PATCH http://127.0.0.1:3000/categoria/1
+Content-Type: application/json
+
+{
+  "nombre": "MUEBLES PARA OFICINAS",
+  "descripcion": "Muebles de Madera"
+}
+
+
+### Eliminar Categoria
+DELETE http://127.0.0.1:3000/categoria/2
