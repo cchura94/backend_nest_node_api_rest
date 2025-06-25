@@ -10,6 +10,7 @@ import { AuthModule } from './modules/auth/auth.module';
 import { PersonasModule } from './modules/admin/personas/personas.module';
 import { EntidadComercialModule } from './modules/admin/entidad-comercial/entidad-comercial.module';
 import { InventarioModule } from './modules/admin/inventario/inventario.module';
+import { NotaModule } from './modules/admin/nota/nota.module';
 
 
 @Module({
@@ -37,6 +38,7 @@ import { InventarioModule } from './modules/admin/inventario/inventario.module';
     PersonasModule,
     EntidadComercialModule,
     InventarioModule,
+    NotaModule,
   ],
   controllers: [AppController],
   providers: [AppService],
