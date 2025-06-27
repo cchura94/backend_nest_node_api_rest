@@ -1,4 +1,4 @@
-GET http://127.0.0.1:3000/nota
+GET http://127.0.0.1:3000/nota?tipo_nota=compra&desde=2025-06-11&hasta=2025-06-26&entidad_comercial_id=1&limit=2&page=4
 
 ### Guardar Nota Ingreso
 
@@ -7,8 +7,8 @@ Content-Type: application/json
 Accept: application/json
 
 {
-    "codigo_nota": "N009",
-    "fecha_emision": "2025-06-16",
+    "codigo_nota": "N016",
+    "fecha_emision": "2025-06-26",
     "tipo_nota": "ingreso",
     "entidad_comercial_id": 1,
     "user_id": "993f1381-a9c6-485a-ab57-c2126f0946bc",
@@ -16,14 +16,14 @@ Accept: application/json
     "estado_nota": "emitido",
     "movimientos": [
         {
-            "producto_id": 2,
+            "producto_id": 53,
             "almacen_id": 1,
-            "cantidad": 45,
+            "cantidad": 10,
             "tipo_movimientos": "ingreso",
-            "precio_unitario_compra": 2,
+            "precio_unitario_compra": 3,
             "precio_unitario_venta": 7,
             "total_linea": 110,
-            "observaciones": "Nueva venta 5"
+            "observaciones": "Nueva compra producto"
         }
     ]
 }
@@ -36,7 +36,7 @@ Content-Type: application/json
 Accept: application/json
 
 {
-    "codigo_nota": "N004",
+    "codigo_nota": "N013",
     "fecha_emision": "2025-06-12",
     "tipo_nota": "venta",
     "entidad_comercial_id": 3,
@@ -49,7 +49,7 @@ Accept: application/json
     "observaciones": "Venta Parcial",
     "movimientos": [
         {
-            "producto_id": 3,
+            "producto_id": 2,
             "almacen_id": 1,
             "cantidad": 20,
             "tipo_movimientos": "salida",
