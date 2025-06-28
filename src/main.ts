@@ -22,6 +22,9 @@ async function bootstrap() {
   SwaggerModule.setup('docs', app, documentFactory);
 
   // endswagger
+
+  // archivos uploads
+  // app.useStaticAssets()
   
   await app.listen(process.env.PORT ?? 3000);
 }
